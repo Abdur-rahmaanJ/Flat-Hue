@@ -1,7 +1,5 @@
 
-
-![picture]Flat-Hue/img/logo.png
-
+![Alt text](Flat-Hue/img/logo.png)
 
 # Flat Hue
 
