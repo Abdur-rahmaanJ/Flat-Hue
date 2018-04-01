@@ -1,5 +1,5 @@
 
-![alt text](img/logo.png)
+![alt text](img/github-logo.png)
 
 # Flat Hue
 
