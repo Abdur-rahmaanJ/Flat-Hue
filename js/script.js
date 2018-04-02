@@ -94,6 +94,66 @@ $(document).ready( function() {
         }
     });
 
+
+    //NAV FONT COLOR
+    //get input value
+    let navFontColor = $('.nav-font-color'); //assign variable to input box
+    let navFontColorValue;  //variable to store input value
+    navFontColor.keyup( function() { //capture text input and assign new value
+        navFontColorValue = navFontColor.val();
+        console.log(navFontColorValue);
+
+        $('.link').css('color', navFontColorValue); //set new font color
+
+        if( navFontColorValue.charAt(0) != '#') { //check for '#' entry
+            $('.link').css('color', '#' + navFontColorValue); //assign color with '#'
+        }
+    });
+
+    
+
+    //Get list of current colors
+
+    let colorOneRGB = $('.color-one').css('backgroundColor');
+    colorOne = rgb2hex(colorOneRGB);
+    console.log(colorOne);
+
+    let colorTwoRGB = $('.color-two').css('backgroundColor');
+    colorTwo = rgb2hex(colorTwoRGB);
+    console.log(colorTwo);
+
+    let colorThreeRGB = $('.color-three').css('backgroundColor');
+    colorThree = rgb2hex(colorThreeRGB);
+    console.log(colorThree);
+
+    let colorFourRGB = $('.color-four').css('backgroundColor');
+    colorFour = rgb2hex(colorFourRGB);
+    console.log(colorFour);
+
+    let colorFiveRGB = $('.color-five').css('backgroundColor');
+    colorFive = rgb2hex(colorFiveRGB);
+    console.log(colorFive);
+
+    // let fontcolorRGB = $('.font-color').css('backgroundColor');
+    // fontColor = rgb2hex(fontcolorRGB);
+    // console.log(fontColor);
+
+
+    
+
+    //Function to convert rgb color to hex format
+    function rgb2hex(rgb) {
+    rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+    return "#" + hex(rgb[1]) + hex(rgb[2]) + hex(rgb[3]);
+    }
+
+    function hex(x) {
+    let hexDigits = new Array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"); 
+    return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
+    }
+    
+
+    
     
 
     
