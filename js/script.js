@@ -8,10 +8,14 @@ $(document).ready( function() {
         console.log(inputOneValue);
 
         $('.color-one').css('background-color', inputOneValue);
+        
 
         if( inputOneValue.charAt(0) != '#') {
             $('.color-one').css('background-color', '#' + inputOneValue);
         }
+
+        let navBar = $('.menu');
+        navBar.css('background-color', inputOneValue);
     });
 
 
@@ -114,9 +118,9 @@ $(document).ready( function() {
 
     //Get list of current colors
 
-    let colorOneRGB = $('.color-one').css('backgroundColor');
-    colorOne = rgb2hex(colorOneRGB);
-    console.log(colorOne);
+    let navBarRGB = $('.color-one').css('backgroundColor');
+    navBarColor = rgb2hex(navBarRGB);
+    console.log(navBarColor);
 
     let colorTwoRGB = $('.color-two').css('backgroundColor');
     colorTwo = rgb2hex(colorTwoRGB);
@@ -134,9 +138,6 @@ $(document).ready( function() {
     colorFive = rgb2hex(colorFiveRGB);
     console.log(colorFive);
 
-    // let fontcolorRGB = $('.font-color').css('backgroundColor');
-    // fontColor = rgb2hex(fontcolorRGB);
-    // console.log(fontColor);
 
 
     

@@ -25,21 +25,13 @@ body {
     font-family:  'Roboto', sans-serif;
     background-color: #dfe6e9;
 
-
-
-
-        
-    
-        
-
-
     .section {
         height: 100%;
         width: 100vw;
-        @include flex-row();
-
-        
-
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
 
         .color-palette {
             height: 100vh;
@@ -49,7 +41,16 @@ body {
 
             .site-logo {
                 width: 150px;
-                margin: 1em;
+                margin: 1em 1em 0;
+            }
+
+            .git-hub-icons {
+                @include flex-row();
+                padding: 1em;
+            }
+
+            .git-hub-icons * {
+                margin-right: 10px;
             }
 
             .color:hover {
@@ -91,6 +92,27 @@ body {
                     color: rgba(204, 204, 204, 0.8);
                     font-size: 2.5rem;
                 }
+
+                @media (max-width: 1024px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+                    ::placeholder{
+                        font-size: 1.75rem;
+                    }
+
+                    .color-one-color {
+                        padding: 0;
+                    }
+                }
                 
             }
 
@@ -129,6 +151,27 @@ body {
                     color: rgba(204, 204, 204, 0.8);
                     font-size: 2.5rem;
                 }
+
+                @media (max-width: 1024px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+                    ::placeholder{
+                        font-size: 1.75rem;
+                    }
+
+                    .color-two-color {
+                        padding: 0;
+                    }
+                }
             }
 
             .color-three {
@@ -165,6 +208,27 @@ body {
                 ::placeholder {
                     color: rgba(204, 204, 204, 0.8);
                     font-size: 2.5rem;
+                }
+
+                @media (max-width: 1024px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+                    ::placeholder{
+                        font-size: 1.75rem;
+                    }
+
+                    .color-three-color {
+                        padding: 0;
+                    }
                 }
             }
 
@@ -203,6 +267,27 @@ body {
                     color: rgba(204, 204, 204, 0.8);
                     font-size: 2.5rem;
                 }
+
+                @media (max-width: 1024px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+                    ::placeholder{
+                        font-size: 1.75rem;
+                    }
+
+                    .color-four-color {
+                        padding: 0;
+                    }
+                }
             }
 
             .color-five {
@@ -240,8 +325,30 @@ body {
                     color: rgba(204, 204, 204, 0.8);
                     font-size: 2.5rem;
                 }
+
+                @media (max-width: 1024px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 768px) {
+                    ::placeholder{
+                        font-size: 2rem;
+                    }
+                }
+                @media (max-width: 320px) {
+                    ::placeholder{
+                        font-size: 1.75rem;
+                    }
+
+                    .color-five-color {
+                        padding: 0;
+                    }
+                }
             }
         }
+
+        
 
         .preview-window {
             width: 70vw;
@@ -311,14 +418,44 @@ body {
                             color: #fff;
                             cursor: pointer;
                         }
+
+                        @media (max-width: 320px) {
+                            .link {
+                                padding: 10px;
+                            }
+                        }
+                    }
+
+                    @media (max-width: 320px) {
+                        .menu {
+                            justify-content: center;
+                        }
                     }
                 }
             }
         }
+
+        @media (max-width: 768px) {
+            .color-palette {
+                width: 100%;
+                padding: 2em;
+            }
+
+            .preview-window {
+                width: 100%;
+            }
+        }
     }
-
-
+    @media (max-width: 768px) {
+        .section {
+            flex-direction: column;
+        }
+    }
+    
 }
+
+
+
 
 
 
