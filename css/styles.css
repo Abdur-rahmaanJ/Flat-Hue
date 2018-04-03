@@ -72,7 +72,7 @@ body .section .color-palette .color-one .label {
   color: #ccc;
 }
 
-body .section .color-palette .color-one .color-one-color {
+body .section .color-palette .color-one .nav-bar-color {
   background-color: transparent;
   border: none;
   outline: none;
@@ -106,7 +106,7 @@ body .section .color-palette .color-one ::placeholder {
   body .section .color-palette .color-one ::placeholder {
     font-size: 1.75rem;
   }
-  body .section .color-palette .color-one .color-one-color {
+  body .section .color-palette .color-one .nav-bar-color {
     padding: 0;
   }
 }
@@ -133,7 +133,7 @@ body .section .color-palette .color-two .label {
   color: #ccc;
 }
 
-body .section .color-palette .color-two .color-two-color {
+body .section .color-palette .color-two .heading-color {
   background-color: transparent;
   border: none;
   outline: none;
@@ -167,7 +167,7 @@ body .section .color-palette .color-two ::placeholder {
   body .section .color-palette .color-two ::placeholder {
     font-size: 1.75rem;
   }
-  body .section .color-palette .color-two .color-two-color {
+  body .section .color-palette .color-two .heading-color {
     padding: 0;
   }
 }
@@ -194,7 +194,7 @@ body .section .color-palette .color-three .label {
   color: #ccc;
 }
 
-body .section .color-palette .color-three .color-three-color {
+body .section .color-palette .color-three .body-color {
   background-color: transparent;
   border: none;
   outline: none;
@@ -228,7 +228,7 @@ body .section .color-palette .color-three ::placeholder {
   body .section .color-palette .color-three ::placeholder {
     font-size: 1.75rem;
   }
-  body .section .color-palette .color-three .color-three-color {
+  body .section .color-palette .color-three .body-color {
     padding: 0;
   }
 }
@@ -367,6 +367,9 @@ body .section .preview-window .preview {
   background-color: #fff;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   border-radius: 10px;
 }
@@ -387,10 +390,10 @@ body .section .preview-window .preview .selection-pane .label {
   padding: 20px 10px;
   font-weight: 300;
   font-size: 1rem;
-  margin-left: 10px;
+  margin: 0 0 0 10px;
 }
 
-body .section .preview-window .preview .selection-pane .nav-font-color, body .section .preview-window .preview .selection-pane .hover-color {
+body .section .preview-window .preview .selection-pane .nav-font-color, body .section .preview-window .preview .selection-pane .jumbo-color, body .section .preview-window .preview .selection-pane .body-font-color {
   width: 100px;
   border: none;
   height: 40px;
@@ -415,6 +418,7 @@ body .section .preview-window .preview .navigation .menu {
   list-style-type: none;
   width: 100%;
   display: flex;
+  margin-bottom: 0;
   flex-direction: row;
   justify-content: flex-end;
   background-color: #222f3e;
@@ -422,7 +426,7 @@ body .section .preview-window .preview .navigation .menu {
 
 body .section .preview-window .preview .navigation .menu .link {
   display: inline-block;
-  padding: 20px 20px;
+  padding: 30px 20px;
   color: #fff;
   cursor: pointer;
 }
@@ -437,6 +441,68 @@ body .section .preview-window .preview .navigation .menu .link {
   body .section .preview-window .preview .navigation .menu {
     justify-content: center;
   }
+}
+
+body .section .preview-window .preview .header-image {
+  height: 50%;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body .section .preview-window .preview .header-image h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #10ac84;
+}
+
+body .section .preview-window .preview .header-image .learn-more {
+  padding: 10px 36px;
+  margin-top: 10px;
+  border: none;
+  background-color: #10ac84;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+body .section .preview-window .preview .header-image .learn-more:hover {
+  background-color: #1dd1a1;
+}
+
+body .section .preview-window .preview .bio-section {
+  width: 100%;
+  height: auto;
+}
+
+body .section .preview-window .preview .bio-section .bio-header {
+  color: #576574;
+  padding: 30px 0 10px;
+  margin-bottom: 0;
+}
+
+body .section .preview-window .preview .bio-section .body-text {
+  font-size: 12px;
+  padding: 0 20px;
+  margin-bottom: 0;
+  color: #576574;
+}
+
+body .section .preview-window .preview .bio-section .learn-more {
+  padding: 10px 36px;
+  border: none;
+  background-color: #10ac84;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+  width: 50%;
+  margin: 10px auto;
+}
+
+body .section .preview-window .preview .bio-section .learn-more:hover {
+  background-color: #1dd1a1;
 }
 
 @media (max-width: 768px) {

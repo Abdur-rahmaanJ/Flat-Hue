@@ -1,100 +1,53 @@
 $(document).ready( function() {
-    //COLOR ONE
+
+    //NAV BAR COLOR
     //get input value
-    let inputOne = $('.color-one-color'); //assign variable to input box
-    let inputOneValue;  //variable to store input value
-    inputOne.keyup( function() { //capture text input and assign new value
-        inputOneValue = inputOne.val();
-        console.log(inputOneValue);
+    let navBarColor = $('.nav-bar-color'); //assign variable to input box
+    let navBarColorValue;  //variable to store input value
+    navBarColor.keyup( function() { //capture text input and assign new value
+        navBarColorValue = navBarColor.val();
+        console.log(navBarColorValue);
 
-        $('.color-one').css('background-color', inputOneValue);
-        
+        $('.menu').css('background-color', navBarColorValue); //set new font color
+        $('.color-one').css('background-color', navBarColorValue);
 
-        if( inputOneValue.charAt(0) != '#') {
-            $('.color-one').css('background-color', '#' + inputOneValue);
-        }
-
-        let navBar = $('.menu');
-        navBar.css('background-color', inputOneValue);
-    });
-
-
-    //COLOR TWO
-    //get input value
-    let inputTwo = $('.color-two-color'); //assign variable to input box
-    let inputTwoValue;  //variable to store input value
-    inputTwo.keyup( function() { //capture text input and assign new value
-        inputTwoValue = inputTwo.val();
-        console.log(inputTwoValue);
-
-        $('.color-two').css('background-color', inputTwoValue);
-
-        if( inputTwoValue.charAt(0) != '#') {
-            $('.color-two').css('background-color', '#' + inputTwoValue);
+        if( navBarColorValue.charAt(0) !== '#') { //check for '#' entry
+            $('.menu').css('background-color', '#' + navBarColorValue);
+            $('.color-one').css('background-color', '#' + navBarColorValue);  //assign color with '#'
         }
     });
 
-
-    //COLOR THREE
+       //HEADING COLOR
     //get input value
-    let inputThree = $('.color-three-color'); //assign variable to input box
-    let inputThreeValue;  //variable to store input value
-    inputThree.keyup( function() { //capture text input and assign new value
-        inputThreeValue = inputThree.val();
-        console.log(inputThreeValue);
+    let headingColor = $('.heading-color'); //assign variable to input box
+    let headingColorValue;  //variable to store input value
+    headingColor.keyup( function() { //capture text input and assign new value
+        headingColorValue = headingColor.val();
+        console.log(headingColorValue);
 
-        $('.color-three').css('background-color', inputThreeValue); //set new bgrnd color
+        $('.bio-header').css('color', headingColorValue);
+        $('.color-two').css('background-color', headingColorValue); //set new font color
 
-        if( inputThreeValue.charAt(0) != '#') { //check for '#' entry
-            $('.color-three').css('background-color', '#' + inputThreeValue); //assign bgrnd color with '#'
+        if( headingColorValue.charAt(0) !== '#') { //check for '#' entry
+            $('.bio-header').css('color', '#' + headingColorValue);
+            $('.color-two').css('background-color', '#' + headingColorValue); //assign color with '#'
         }
     });
 
-
-    //COLOR FOUR
+    //BODY BACKGROUND COLOR
     //get input value
-    let inputFour = $('.color-four-color'); //assign variable to input box
-    let inputFourValue;  //variable to store input value
-    inputFour.keyup( function() { //capture text input and assign new value
-        inputFourValue = inputFour.val();
-        console.log(inputFourValue);
+    let bodyColor = $('.body-color'); //assign variable to input box
+    let bodyColorValue;  //variable to store input value
+    bodyColor.keyup( function() { //capture text input and assign new value
+        bodyColorValue = bodyColor.val();
+        console.log(bodyColorValue);
 
-        $('.color-four').css('background-color', inputFourValue); //set new bgrnd color
+        $('.preview').css('background-color', bodyColorValue);
+        $('.color-three').css('background-color', bodyColorValue); //set new font color
 
-        if( inputFourValue.charAt(0) != '#') { //check for '#' entry
-            $('.color-four').css('background-color', '#' + inputFourValue); //assign bgrnd color with '#'
-        }
-    });
-
-
-    //COLOR FIVE
-    //get input value
-    let inputFive = $('.color-five-color'); //assign variable to input box
-    let inputFiveValue;  //variable to store input value
-    inputFive.keyup( function() { //capture text input and assign new value
-        inputFiveValue = inputFive.val();
-        console.log(inputFiveValue);
-
-        $('.color-five').css('background-color', inputFiveValue); //set new bgrnd color
-
-        if( inputFiveValue.charAt(0) != '#') { //check for '#' entry
-            $('.color-five').css('background-color', '#' + inputFiveValue); //assign bgrnd color with '#'
-        }
-    });
-
-
-    //COLOR SIX
-    //get input value
-    let inputSix = $('.color-six-color'); //assign variable to input box
-    let inputSixValue;  //variable to store input value
-    inputSix.keyup( function() { //capture text input and assign new value
-        inputSixValue = inputSix.val();
-        console.log(inputSixValue);
-
-        $('.color-six').css('background-color', inputSixValue); //set new bgrnd color
-
-        if( inputSixValue.charAt(0) != '#') { //check for '#' entry
-            $('.color-six').css('background-color', '#' + inputSixValue); //assign bgrnd color with '#'
+        if( bodyColorValue.charAt(0) !== '#') { //check for '#' entry
+            $('.preview').css('background-color', '#' + bodyColorValue);
+            $('.color-three').css('background-color', '#' + bodyColorValue); //assign color with '#'
         }
     });
 
@@ -109,34 +62,69 @@ $(document).ready( function() {
 
         $('.link').css('color', navFontColorValue); //set new font color
 
-        if( navFontColorValue.charAt(0) != '#') { //check for '#' entry
+        if( navFontColorValue.charAt(0) !== '#') { //check for '#' entry
             $('.link').css('color', '#' + navFontColorValue); //assign color with '#'
+        }
+    });
+
+
+    //JUMBOTRON BACKGROUND COLOR
+    //get input value
+    let jumboColor = $('.jumbo-color'); //assign variable to input box
+    let jumboColorValue;  //variable to store input value
+    console.log(jumboColorValue);
+    jumboColor.keyup( function() { //capture text input and assign new value
+        jumboColorValue = jumboColor.val();
+        console.log(jumboColorValue);
+
+        if( jumboColorValue.charAt(0) !== '#') { //check for '#' entry
+        $('.header-image').css('background-color', '#' + jumboColorValue); //assign color with '#'
+        }
+
+        $('.header-image').css('background-color', jumboColorValue); //set new font color
+
+        
+    });
+
+
+    //JUMBOTRON BACKGROUND COLOR
+    //get input value
+    let bodyFontColor = $('.body-font-color'); //assign variable to input box
+    let bodyFontColorValue;  //variable to store input value
+    bodyFontColor.keyup( function() { //capture text input and assign new value
+        bodyFontColorValue = bodyFontColor.val();
+        console.log(bodyFontColorValue);
+
+        $('.body-text').css('color', bodyFontColorValue); //set new font color
+
+        if( bodyFontColorValue.charAt(0) !==     '#') { //check for '#' entry
+        $('.body-text').css('color', '#' + bodyFontColorValue); //assign color with '#'
         }
     });
 
     
 
-    //Get list of current colors
+    // //Get list of current colors
 
-    let navBarRGB = $('.color-one').css('backgroundColor');
-    navBarColor = rgb2hex(navBarRGB);
-    console.log(navBarColor);
+    // let navBarRGB = $('.color-one').css('backgroundColor');
+    // navBarColor = rgb2hex(navBarRGB);
+    // console.log(navBarColor);
 
-    let colorTwoRGB = $('.color-two').css('backgroundColor');
-    colorTwo = rgb2hex(colorTwoRGB);
-    console.log(colorTwo);
+    // let colorTwoRGB = $('.color-two').css('backgroundColor');
+    // colorTwo = rgb2hex(colorTwoRGB);
+    // console.log(colorTwo);
 
-    let colorThreeRGB = $('.color-three').css('backgroundColor');
-    colorThree = rgb2hex(colorThreeRGB);
-    console.log(colorThree);
+    // let colorThreeRGB = $('.color-three').css('backgroundColor');
+    // colorThree = rgb2hex(colorThreeRGB);
+    // console.log(colorThree);
 
-    let colorFourRGB = $('.color-four').css('backgroundColor');
-    colorFour = rgb2hex(colorFourRGB);
-    console.log(colorFour);
+    // let colorFourRGB = $('.color-four').css('backgroundColor');
+    // colorFour = rgb2hex(colorFourRGB);
+    // console.log(colorFour);
 
-    let colorFiveRGB = $('.color-five').css('backgroundColor');
-    colorFive = rgb2hex(colorFiveRGB);
-    console.log(colorFive);
+    // let colorFiveRGB = $('.color-five').css('backgroundColor');
+    // colorFive = rgb2hex(colorFiveRGB);
+    // console.log(colorFive);
 
 
 

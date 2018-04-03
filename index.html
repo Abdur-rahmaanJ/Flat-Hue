@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title>Flat Hue | Flat Color Palette Previewer - Modern UI/UX Flat Palettes</title>
 </head>
@@ -18,23 +19,23 @@
                 <a class="github-button" href="https://github.com/DanielJBailey" aria-label="Follow @DanielJBailey on GitHub">Follow @DanielJBailey</a>
                 <a class="github-button" href="https://github.com/DanielJBailey/Flat-Hue" data-icon="octicon-star" data-show-count="true" aria-label="Star DanielJBailey/Flat-Hue on GitHub">Star</a>
             </div>
-            <div class="color color-one">
+            <div class="color-one">
                 <p class="label">Nav Bar</p>
-                <input type="text" class="color-one-color" id="color-one-color" placeholder="#222f3e"/>
+                <input type="text" class="nav-bar-color" id="nav-bar-color" placeholder="#222f3e"/>
             </div>
-            <div class="color color-two">
-                    <p class="label">Color # 2</p>
-                <input type="text" class="color-two-color" id="color-two-color" placeholder="#576574"/>
+            <div class="color-two">
+                    <p class="label">Heading Color</p>
+                <input type="text" class="heading-color" id="heading-color" placeholder="#576574"/>
             </div>
-            <div class="color color-three">
-                    <p class="label">Color # 3</p>
-                <input type="text" class="color-three-color" id="color-three-color" placeholder="#FFFFFF"/>
+            <div class="color-three">
+                    <p class="label">Body Background Color</p>
+                <input type="text" class="body-color" id="body-color" placeholder="#FFFFFF"/>
             </div>
-            <div class="color color-four">
+            <div class="color-four">
                     <p class="label">Accent # 1</p>
                 <input type="text" class="color-four-color" id="color-four-color" placeholder="#10ac84"/>
             </div>
-            <div class="color color-five">
+            <div class="color-five">
                     <p class="label">Accent # 2</p>
                 <input type="text" class="color-five-color" id="color-five-color" placeholder="#1dd1a1"/>
             </div>
@@ -44,8 +45,15 @@
             
             <div class="preview">
                 <div class="selection-pane">
+
                     <label for "nav-font-color" class="label">Nav Font Color:</label>
                     <input type="text" class="nav-font-color" id="nav-font-color" placeholder="#FFFFFF"/>
+
+                    <label for "jumbo-color" class="label">JumboTron Color:</label>
+                    <input type="text" class="jumbo-color" id="jumbo-color" placeholder="#CCCCC"/>
+
+                    <label for "body-font-color" class="label">Body Font Color:</label>
+                    <input type="text" class="body-font-color" id="body-font-color" placeholder="#576574"/>
                     
                 </div>
 
@@ -58,6 +66,27 @@
                         <li class="link">Contact</li>
                     </ul>
                 </div>
+
+                <div class="header-image">
+                    <h1>Hello World.</h1>
+                    <button class="learn-more">Learn More</button>
+                </div>
+
+                <div class="bio-section container">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex flex-column justify-content-start">
+                            <h2 class="bio-header text-center">What is Lorem Ipsum?</h2>
+                            <p class="body-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged...</p>
+                            <button class="learn-more">Read More</button>
+                        </div>
+                        <div class="col-sm-6 d-flex flex-column justify-content-start">
+                            <h2 class="bio-header text-center">Why do we use it?</h2>
+                            <p class="body-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English...</p>
+                            <button class="learn-more">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                                
 
             </div>
 

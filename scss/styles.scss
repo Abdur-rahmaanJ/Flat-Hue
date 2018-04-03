@@ -75,7 +75,7 @@ body {
                     color: #ccc;
                 }
 
-                .color-one-color {
+                .nav-bar-color {
                     background-color: transparent;
                     border: none;
                     outline: none;
@@ -109,7 +109,7 @@ body {
                         font-size: 1.75rem;
                     }
 
-                    .color-one-color {
+                    .nav-bar-color {
                         padding: 0;
                     }
                 }
@@ -134,7 +134,7 @@ body {
                     color: #ccc;
                 }
 
-                .color-two-color {
+                .heading-color {
                     background-color: transparent;
                     border: none;
                     outline: none;
@@ -168,7 +168,7 @@ body {
                         font-size: 1.75rem;
                     }
 
-                    .color-two-color {
+                    .heading-color {
                         padding: 0;
                     }
                 }
@@ -192,7 +192,7 @@ body {
                     color: #ccc;
                 }
 
-                .color-three-color {
+                .body-color {
                     background-color: transparent;
                     border: none;
                     outline: none;
@@ -226,7 +226,7 @@ body {
                         font-size: 1.75rem;
                     }
 
-                    .color-three-color {
+                    .body-color {
                         padding: 0;
                     }
                 }
@@ -361,6 +361,9 @@ body {
                 background-color: #fff;
                 height: 100%;
                 width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
                 position: relative;
                 border-radius: 10px;
 
@@ -379,10 +382,10 @@ body {
                         padding: 20px 10px;
                         font-weight: 300;
                         font-size: 1rem;
-                        margin-left: 10px;
+                        margin: 0 0 0 10px;
                     }
 
-                    .nav-font-color, .hover-color {
+                    .nav-font-color, .jumbo-color, .body-font-color {
                         width: 100px;
                         border: none;
                         height: 40px;
@@ -408,13 +411,14 @@ body {
                         list-style-type: none;
                         width: 100%;
                         display: flex;
+                        margin-bottom: 0;
                         flex-direction: row;
                         justify-content: flex-end;
                         background-color: #222f3e;
 
                         .link {
                             display: inline-block;
-                            padding: 20px 20px;
+                            padding: 30px 20px;
                             color: #fff;
                             cursor: pointer;
                         }
@@ -430,6 +434,65 @@ body {
                         .menu {
                             justify-content: center;
                         }
+                    }
+                }
+
+                .header-image {
+                    height: 50%;
+                    background-color: #ccc;
+                    @include flex-col();
+                    
+                    h1 {
+                        font-size: 4rem;
+                        font-weight: 300;
+                        color: #10ac84;
+                    }
+
+                    .learn-more {
+                        padding: 10px 36px;
+                        margin-top: 10px;
+                        border: none;
+                        background-color: #10ac84;
+                        font-size: 14px;
+                        color: white;
+                        cursor: pointer;
+                    }
+
+                    .learn-more:hover {
+                        background-color: #1dd1a1;
+                    }
+                }
+
+                .bio-section {
+                    width: 100%;
+                    height: auto;
+
+                    .bio-header {
+                        color: #576574;
+                        padding: 30px 0 10px;
+                        margin-bottom: 0;
+                    }
+
+                    .body-text {
+                        font-size: 12px;
+                        padding: 0 20px;
+                        margin-bottom: 0;
+                        color: #576574;
+                    }
+
+                    .learn-more {
+                        padding: 10px 36px;
+                        border: none;
+                        background-color: #10ac84;
+                        font-size: 14px;
+                        color: white;
+                        cursor: pointer;
+                        width: 50%;
+                        margin: 10px auto;
+                    }
+
+                    .learn-more:hover {
+                        background-color: #1dd1a1;
                     }
                 }
             }
