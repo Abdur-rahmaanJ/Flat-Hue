@@ -11,11 +11,12 @@ $(document).ready( function() {
         $('.menu').css('background-color', navBarColorValue); //set new font color
         $('.color-one').css('background-color', navBarColorValue);
 
-        if( navBarColorValue.charAt(0) !== '#') { //check for '#' entry
+        if( navBarColorValue.charAt(0) != '#') { //check for '#' entry
             $('.menu').css('background-color', '#' + navBarColorValue);
             $('.color-one').css('background-color', '#' + navBarColorValue);  //assign color with '#'
         }
     });
+
 
        //HEADING COLOR
     //get input value
@@ -28,11 +29,12 @@ $(document).ready( function() {
         $('.bio-header').css('color', headingColorValue);
         $('.color-two').css('background-color', headingColorValue); //set new font color
 
-        if( headingColorValue.charAt(0) !== '#') { //check for '#' entry
+        if( headingColorValue.charAt(0) != '#') { //check for '#' entry
             $('.bio-header').css('color', '#' + headingColorValue);
             $('.color-two').css('background-color', '#' + headingColorValue); //assign color with '#'
         }
     });
+
 
     //BODY BACKGROUND COLOR
     //get input value
@@ -45,9 +47,47 @@ $(document).ready( function() {
         $('.preview').css('background-color', bodyColorValue);
         $('.color-three').css('background-color', bodyColorValue); //set new font color
 
-        if( bodyColorValue.charAt(0) !== '#') { //check for '#' entry
+        if( bodyColorValue.charAt(0) != '#') { //check for '#' entry
             $('.preview').css('background-color', '#' + bodyColorValue);
-            $('.color-three').css('background-color', '#' + bodyColorValue); //assign color with '#'
+            $('.color-three').css('background-color', '#' + bodyColorValue); 
+        }
+    });
+
+
+    //MAIN ACCENT COLOR
+    //get input value
+    let mainAccentColor = $('.main-accent-color'); //assign variable to input box
+    let mainAccentColorValue;  //variable to store input value
+    mainAccentColor.keyup( function() { //capture text input and assign new value
+        mainAccentColorValue = mainAccentColor.val();
+        console.log(mainAccentColorValue);
+
+        $('.color-four').css('background-color', mainAccentColorValue); //set new bgrnd color
+        $('.big-heading').css('color', mainAccentColorValue); //set new font color
+
+        if( mainAccentColorValue.charAt(0) != '#') { //check for '#' entry
+            $('.color-four').css('background-color', '#' + mainAccentColorValue); 
+            $('.big-heading').css('color', '#' +  mainAccentColorValue); 
+        }
+    });
+
+
+    //SECONDARY ACCENT COLOR
+    //get input value
+    let secAccentColor = $('.sec-accent-color'); //assign variable to input box
+    let secAccentColorValue;  //variable to store input value
+    secAccentColor.keyup( function() { //capture text input and assign new value
+        secAccentColorValue = secAccentColor.val();
+        console.log(secAccentColorValue);
+
+        $('.color-five').css('background-color', secAccentColorValue); //set new bgrnd color
+        $('.learn-more').css("background-color", secAccentColorValue);
+
+        if( secAccentColorValue.charAt(0) != '#') { //check for '#' entry
+            $('.color-five').css('background-color', '#' + secAccentColorValue);
+            $('.learn-more').css('background-color', '#' + secAccentColorValue);
+
+
         }
     });
 
@@ -62,8 +102,8 @@ $(document).ready( function() {
 
         $('.link').css('color', navFontColorValue); //set new font color
 
-        if( navFontColorValue.charAt(0) !== '#') { //check for '#' entry
-            $('.link').css('color', '#' + navFontColorValue); //assign color with '#'
+        if( navFontColorValue.charAt(0) != '#') { //check for '#' entry
+            $('.link').css('color', '#' + navFontColorValue); 
         }
     });
 
@@ -77,11 +117,11 @@ $(document).ready( function() {
         jumboColorValue = jumboColor.val();
         console.log(jumboColorValue);
 
-        if( jumboColorValue.charAt(0) !== '#') { //check for '#' entry
+        if( jumboColorValue.charAt(0) != '#') { //check for '#' entry
         $('.header-image').css('background-color', '#' + jumboColorValue); //assign color with '#'
         }
 
-        $('.header-image').css('background-color', jumboColorValue); //set new font color
+        $('.header-image').css('background-color', jumboColorValue); //set new bgrnd color
 
         
     });
@@ -97,38 +137,11 @@ $(document).ready( function() {
 
         $('.body-text').css('color', bodyFontColorValue); //set new font color
 
-        if( bodyFontColorValue.charAt(0) !==     '#') { //check for '#' entry
-        $('.body-text').css('color', '#' + bodyFontColorValue); //assign color with '#'
+        if( bodyFontColorValue.charAt(0) != '#') { //check for '#' entry
+        $('.body-text').css('color', '#' + bodyFontColorValue); 
         }
     });
 
-    
-
-    // //Get list of current colors
-
-    // let navBarRGB = $('.color-one').css('backgroundColor');
-    // navBarColor = rgb2hex(navBarRGB);
-    // console.log(navBarColor);
-
-    // let colorTwoRGB = $('.color-two').css('backgroundColor');
-    // colorTwo = rgb2hex(colorTwoRGB);
-    // console.log(colorTwo);
-
-    // let colorThreeRGB = $('.color-three').css('backgroundColor');
-    // colorThree = rgb2hex(colorThreeRGB);
-    // console.log(colorThree);
-
-    // let colorFourRGB = $('.color-four').css('backgroundColor');
-    // colorFour = rgb2hex(colorFourRGB);
-    // console.log(colorFour);
-
-    // let colorFiveRGB = $('.color-five').css('backgroundColor');
-    // colorFive = rgb2hex(colorFiveRGB);
-    // console.log(colorFive);
-
-
-
-    
 
     //Function to convert rgb color to hex format
     function rgb2hex(rgb) {
