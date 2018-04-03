@@ -8,11 +8,11 @@ $(document).ready( function() {
         navBarColorValue = navBarColor.val();
         console.log(navBarColorValue);
 
-        $('.menu').css('background-color', navBarColorValue); //set new font color
+        $('.navigation').css('background-color', navBarColorValue); //set new font color
         $('.color-one').css('background-color', navBarColorValue);
 
         if( navBarColorValue.charAt(0) != '#') { //check for '#' entry
-            $('.menu').css('background-color', '#' + navBarColorValue);
+            $('.navigation').css('background-color', '#' + navBarColorValue);
             $('.color-one').css('background-color', '#' + navBarColorValue);  //assign color with '#'
         }
     });
@@ -63,11 +63,11 @@ $(document).ready( function() {
         console.log(mainAccentColorValue);
 
         $('.color-four').css('background-color', mainAccentColorValue); //set new bgrnd color
-        $('.big-heading').css('color', mainAccentColorValue); //set new font color
+        $('.big-headings').css('color', mainAccentColorValue); //set new font color
 
         if( mainAccentColorValue.charAt(0) != '#') { //check for '#' entry
             $('.color-four').css('background-color', '#' + mainAccentColorValue); 
-            $('.big-heading').css('color', '#' +  mainAccentColorValue); 
+            $('.big-headings').css('color', '#' +  mainAccentColorValue); 
         }
     });
 
@@ -101,9 +101,11 @@ $(document).ready( function() {
         console.log(navFontColorValue);
 
         $('.link').css('color', navFontColorValue); //set new font color
+        $('.burger').css('color', navFontColorValue); //set new font color
 
         if( navFontColorValue.charAt(0) != '#') { //check for '#' entry
             $('.link').css('color', '#' + navFontColorValue); 
+            $('.burger').css('color', '#' + navFontColorValue); //set new font color
         }
     });
 
@@ -127,7 +129,7 @@ $(document).ready( function() {
     });
 
 
-    //JUMBOTRON BACKGROUND COLOR
+    //BODY FONT COLOR
     //get input value
     let bodyFontColor = $('.body-font-color'); //assign variable to input box
     let bodyFontColorValue;  //variable to store input value
