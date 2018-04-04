@@ -477,6 +477,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
 
         h1 {
             color: #666;
@@ -535,6 +536,40 @@ body {
                 padding: 3em 0 0 0;
             }
         }
+
+        .ending {
+            position: absolute;
+            bottom: 0;
+            background-color: #4a4a4a;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .git-hub-icons {
+                margin: 0 auto;
+                padding: 20px 0 15px;
+            }
+
+            .social {
+                
+
+                .social-menu {
+                    list-style-type: none;
+
+                    .social-menu li {
+                        display: inline-block;
+
+                        .icon {
+                            color: #fff;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
         
     }
 
@@ -544,7 +579,9 @@ body {
             justify-content: flex-start;
             align-items: flex-start;
         }
-    }      
+    }  
+    
+    
 
 }//end body
 

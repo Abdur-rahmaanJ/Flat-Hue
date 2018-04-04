@@ -474,6 +474,7 @@ body .samples {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 body .samples h1 {
@@ -537,6 +538,34 @@ body .samples #sample-container .cell .color-hex {
   body .samples #sample-container {
     padding: 3em 0 0 0;
   }
+}
+
+body .samples .ending {
+  position: absolute;
+  bottom: 0;
+  background-color: #4a4a4a;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+body .samples .ending .git-hub-icons {
+  margin: 0 auto;
+  padding: 20px 0 15px;
+}
+
+body .samples .ending .social .social-menu {
+  list-style-type: none;
+}
+
+body .samples .ending .social .social-menu .social-menu li {
+  display: inline-block;
+}
+
+body .samples .ending .social .social-menu .social-menu li .icon {
+  color: #fff;
 }
 
 @media (max-width: 1024px) {
