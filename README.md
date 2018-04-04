@@ -1,8 +1,13 @@
 
-![alt text](img/github-logo.png)
+![alt text](img/FlatHueLogo.png)
 
 # Flat Hue
 
-This is a project that is intended to allow front end developers to brainstorm color options and get a visual reference to how those colors would work together without having to alter their own code.
+Flat Hue was created in order for front end developers like myself to be able to visualize different color schemes without having to alter their code multiple times trying out different color palettes. 
 
-I am opening this up to the public in hopes someone finds this as useful as I do in visualizing different colors together without having to tab back and forth looking for colors that might work together.
+**##Goals**
+1. Would like to generate colors on page load without having to click buttons
+2. Would like to be able to click to copy hex code on each of the blocks generated
+
+**##Contributors**
+1. @mariamrf -- Provided random flat color generator function.
