@@ -203,6 +203,7 @@ $(document).ready(function () {
     var flatColor = function(h){
         var PHI = 0.618033988749895; 
         var s, v;
+        var hue;
         if(h===undefined){
             hue = (Math.floor(Math.random()*(360 - 0 + 1)+0))/360;
             h = ( hue + ( hue / PHI )) % 360; 
