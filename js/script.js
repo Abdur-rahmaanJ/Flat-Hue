@@ -4,8 +4,8 @@ $(document).ready(function () {
 
     //NAV BAR COLOR
     //get input value
-    var navBarColor = $('.nav-bar-color'); //assign variable to input box
-    var navBarColorValue; //variable to store input value
+    let navBarColor = $('.nav-bar-color'); //assign letiable to input box
+    let navBarColorValue; //letiable to store input value
     navBarColor.keyup(function () {
         //capture text input and assign new value
         navBarColorValue = navBarColor.val();
@@ -23,8 +23,8 @@ $(document).ready(function () {
 
     //HEADING COLOR
     //get input value
-    var headingColor = $('.heading-color'); //assign variable to input box
-    var headingColorValue; //variable to store input value
+    let headingColor = $('.heading-color'); //assign letiable to input box
+    let headingColorValue; //letiable to store input value
     headingColor.keyup(function () {
         //capture text input and assign new value
         headingColorValue = headingColor.val();
@@ -42,8 +42,8 @@ $(document).ready(function () {
 
     //BODY BACKGROUND COLOR
     //get input value
-    var bodyColor = $('.body-color'); //assign variable to input box
-    var bodyColorValue; //variable to store input value
+    let bodyColor = $('.body-color'); //assign letiable to input box
+    let bodyColorValue; //letiable to store input value
     bodyColor.keyup(function () {
         //capture text input and assign new value
         bodyColorValue = bodyColor.val();
@@ -61,8 +61,8 @@ $(document).ready(function () {
 
     //MAIN ACCENT COLOR
     //get input value
-    var mainAccentColor = $('.main-accent-color'); //assign variable to input box
-    var mainAccentColorValue; //variable to store input value
+    let mainAccentColor = $('.main-accent-color'); //assign letiable to input box
+    let mainAccentColorValue; //letiable to store input value
     mainAccentColor.keyup(function () {
         //capture text input and assign new value
         mainAccentColorValue = mainAccentColor.val();
@@ -80,8 +80,8 @@ $(document).ready(function () {
 
     //SECONDARY ACCENT COLOR
     //get input value
-    var secAccentColor = $('.sec-accent-color'); //assign variable to input box
-    var secAccentColorValue; //variable to store input value
+    let secAccentColor = $('.sec-accent-color'); //assign letiable to input box
+    let secAccentColorValue; //letiable to store input value
     secAccentColor.keyup(function () {
         //capture text input and assign new value
         secAccentColorValue = secAccentColor.val();
@@ -99,8 +99,8 @@ $(document).ready(function () {
 
     //NAV FONT COLOR
     //get input value
-    var navFontColor = $('.nav-font-color'); //assign variable to input box
-    var navFontColorValue; //variable to store input value
+    let navFontColor = $('.nav-font-color'); //assign letiable to input box
+    let navFontColorValue; //letiable to store input value
     navFontColor.keyup(function () {
         //capture text input and assign new value
         navFontColorValue = navFontColor.val();
@@ -118,8 +118,8 @@ $(document).ready(function () {
 
     //JUMBOTRON BACKGROUND COLOR
     //get input value
-    var jumboColor = $('.jumbo-color'); //assign variable to input box
-    var jumboColorValue; //variable to store input value
+    let jumboColor = $('.jumbo-color'); //assign letiable to input box
+    let jumboColorValue; //letiable to store input value
     console.log(jumboColorValue);
     jumboColor.keyup(function () {
         //capture text input and assign new value
@@ -136,8 +136,8 @@ $(document).ready(function () {
 
     //BODY FONT COLOR
     //get input value
-    var bodyFontColor = $('.body-font-color'); //assign variable to input box
-    var bodyFontColorValue; //variable to store input value
+    let bodyFontColor = $('.body-font-color'); //assign letiable to input box
+    let bodyFontColorValue; //letiable to store input value
     bodyFontColor.keyup(function () {
         //capture text input and assign new value
         bodyFontColorValue = bodyFontColor.val();
@@ -158,41 +158,41 @@ $(document).ready(function () {
     }
 
     function hex(x) {
-        var hexDigits = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
+        let hexDigits = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f");
         return isNaN(x) ? "00" : hexDigits[(x - x % 16) / 16] + hexDigits[x % 16];
     }
 
-    var numberOfColors = 12; //set default color count
-    var reload = document.getElementById('re-generate'); //set button as variable
-    var colorContainer = document.getElementById('sample-container'); //assign container to variable
-    var runCount = 0;
+    let numberOfColors = 12; //set default color count
+    let reload = document.getElementById('re-generate'); //set button as letiable
+    let colorContainer = document.getElementById('sample-container'); //assign container to letiable
+    let runCount = 0;
 
     //reload function
     reload.addEventListener('click', function () {
 
         colorContainer.innerHTML = "";
 
-        for (var i = 0; i < numberOfColors; i++) {
+        for (let i = 0; i < numberOfColors; i++) {
 
-            var newFlatColor = new flatColor(); //call color function to return color
-            var newColor = document.createElement('li'); //create li element for color
+            let newFlatColor = new flatColor(); //call color function to return color
+            let newColor = document.createElement('li');//create li element for color
             newColor.className = 'cell'; //assign class to li element
-            var colorHex = document.createElement('p'); //create p element for inner hex number
+            let colorHex = document.createElement('p'); //create p element for inner hex number
             colorHex.className = 'color-hex'; //assign class to p element
             colorHex.innerText = newFlatColor.hex; //add hex to element
             newColor.appendChild(colorHex); //append hex to box color           
             console.log(newFlatColor.hex); //console log color
             newColor.style.backgroundColor = newFlatColor.hex; //assign color to background of current element
             colorContainer.appendChild(newColor); //append color to container
-            newColor.addEventListener('mouseenter', function () {
+            newColor.addEventListener('mouseenter', () => {
                 colorHex.style.display = "block";
             });
-            newColor.addEventListener('mouseleave', function () {
+            newColor.addEventListener('mouseleave', () => {
                 colorHex.style.display = "none";
             });
-            if (runCount == 0) {
+            if(runCount == 0) {
                 reload.innerText = "";
-                reload.innerText = 'Refresh Colors';
+            reload.innerText = 'Refresh Colors';
             }
             runCount++;
         }
@@ -200,10 +200,10 @@ $(document).ready(function () {
 
     // *** This code was provided by @mariamrf at https://github.com/mariamrf/flat-color-generator **//
 
-    var flatColor = function(h){
-        var PHI = 0.618033988749895; 
-        var s, v;
-        var hue;
+    let flatColor = function(h){
+        let PHI = 0.618033988749895; 
+        let s, v;
+        let hue;
         if(h===undefined){
             hue = (Math.floor(Math.random()*(360 - 0 + 1)+0))/360;
             h = ( hue + ( hue / PHI )) % 360; 
@@ -213,7 +213,7 @@ $(document).ready(function () {
         s = (v-10)/100;
         v = v/100;
     
-        var r, g, b, i, f, p, q, t;
+        let r, g, b, i, f, p, q, t;
         i = Math.floor(h * 6);
         f = h * 6 - i;
         p = v * (1 - s);
@@ -231,7 +231,7 @@ $(document).ready(function () {
             g = Math.round(g * 255);
             b = Math.round(b * 255);
     
-        var finalColor = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        let finalColor = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     
         this.h = h;
         this.s = s;
